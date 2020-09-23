@@ -14,8 +14,8 @@
 
 @section('conteudo-secundario')
 
-    {{'Criar depois'}}<br><br>
+    <p class="center">{{'Criar depois'}}</p>
 
-    {{$texto}}
+    <p class="center">{{$texto}}</p>
 
 @endsection

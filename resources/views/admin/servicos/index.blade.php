@@ -2,8 +2,8 @@
 
 @section('conteudo-principal')
 
-    {{'Criar depois pagina de cadastro de serviços'}}<br><br>
+    <p class="center">{{'Criar depois pagina de cadastro de serviços'}}</p>
 
-    {{$texto}}
+    <p class="center">{{$texto}}</p>
 
 @endsection

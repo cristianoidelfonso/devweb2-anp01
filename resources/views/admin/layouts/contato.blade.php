@@ -2,8 +2,8 @@
 
 @section('conteudo-principal')
 
-    {{'Criar depois'}}<br><br>
+    <p class="center">{{'Criar depois'}}</p>
 
-    {{$word1}} {{$word2}} {{$word3}}
+    <p class="center">{{$word1}} {{$word2}} {{$word3}}</p>
 
 @endsection
