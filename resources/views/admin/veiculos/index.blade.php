@@ -3,10 +3,11 @@
 @section('conteudo-principal')
 
     <section class="section">
-        <table class="highlight">
+        <div class="tableFixHead">
+        <table class="highlight responsive-table centered">
             <thead>
                 <tr>
-                    <th>Veículos</th>
+                    <th class="centered">Veículos</th>
                     <th>Serviço</th>
                     <th class="center-align">Opções</th>
                 </tr>
@@ -17,9 +18,10 @@
                         <td>{{$carro}}</td>
                         <td>{{$servico}}</td>
                         <td class="center-align">
-                            <a href="">Editar</a> -
-                            <a href="">Concluído</a> -
-                            <a href="">Excluir</a>
+                            @foreach ($acoes as $acao => $value)
+                                {{-- <a href="{{$value}}">{{$acao}}</a> - --}}
+                                <a href="/lista-servicos">{{$acao}}</a>&ensp;
+                            @endforeach
                         </td>
                     </tr>
                 @empty
@@ -29,6 +31,7 @@
                 @endforelse
             </tbody>
         </table>
+        </div>
     </section>
 
 @endsection

@@ -8,7 +8,7 @@ class MainController extends Controller
 {
 
     public function index(){
-        return view('admin.layouts.principal');
+        return view('admin.layouts.conteudo-inicial');
     }
 
     public function cadastrar(){
@@ -25,12 +25,20 @@ class MainController extends Controller
                     'Toro' => 'Rastreamento de pane eletrica',
                     'Punto' => 'Troca de embreagem',
                     'Classic' =>'Trocar pneus',
-                    'Renegade' => 'Balanceamento e alinhamento',
+                    'Jeep Renegade' => 'Balanceamento e alinhamento',
                     'Fox' => 'Troca de correia, filtros e oleo',
-                    'S10' => 'Rastreamento de pane eletrica',
+                    'Belina' => 'Rastreamento de pane eletrica',
+                    'HB20' => 'Rastreamento de pane eletrica',
+                    'EcoSport' => 'Rastreamento de pane eletrica',
+                    'Saveiro' => 'Rastreamento de pane eletrica',
+                    'Jeep Compass' => 'Rastreamento de pane eletrica',
+                    'Frontier' => 'Rastreamento de pane eletrica',
+                    'Virtus' => 'Rastreamento de pane eletrica',
                     'Chevet' => 'Troca de embreagem'];
 
-        return view('admin.veiculos.index', compact('sobre', 'carros'));
+        $acoes = ['Editar' => '/editar', "Concluido" => '/concluido', 'Excluir' => '/excluir'];
+
+        return view('admin.veiculos.index', compact('sobre', 'carros', 'acoes'));
     }
 
     public function sobre(){
