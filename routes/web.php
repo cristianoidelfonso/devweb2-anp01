@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
     // return view('welcome');
 // });
 
-Route::get('/', function() {
-    return view('index');
-});
+// Route::get('/', function() {return view('index');});
+Route::get('/', [MainController::class, 'index']);
+
+Route::get('novo-servico', [MainController::class, 'cadastrar']);
+Route::get('lista-servicos', [MainController::class, 'listar']);
+Route::get('sobre', [MainController::class, 'sobre']);
+Route::get('contato', [MainController::class, 'contato']);
